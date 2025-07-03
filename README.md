@@ -22,11 +22,6 @@ src/main/java/demo holds Person.java and the demo client.
 
 screenshots contains proof images of container mapping and demo output.
 
-.gitignore
-/target
-*.log
-*.class
-
 
 # Prerequisites
 Java 11 or later installed on your machine.
