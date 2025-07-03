@@ -27,41 +27,32 @@ screenshots contains proof images of container mapping and demo output.
 *.log
 *.class
 
-# IDE
-*.iml
-.idea
-.vscode
 
-# macOS
-.DS_Store
-Prerequisites
+# Prerequisites
 Java 11 or later installed on your machine.
 
 Maven installed, or use the Maven wrapper.
 
 Docker installed and running.
 
-Build
+# Build
 Run in the project root:
 
-bash
 mvn clean compile
 This downloads dependencies and compiles the code.
 
-Run
+# Run
 1. Start Hazelcast Server
-bash
 docker run -d \
   --name hazelcast-server \
   -p 5701:5701 \
   hazelcast/hazelcast:latest
+
 2. Verify with Docker
-bash
 docker ps
 Look for hazelcast-server with 0.0.0.0:5701->5701/tcp under PORTS.
 
 3. Execute the Demo Client
-bash
 mvn exec:java \
   -Dexec.mainClass="demo.HazelcastMapExample"
 Expected output:
